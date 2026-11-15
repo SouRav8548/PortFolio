@@ -239,3 +239,26 @@ document.querySelectorAll(".flip-card").forEach((card) => {
     if (e.key === "Escape" && card.classList.contains("is-flipped")) setFlipped(false);
   });
 });
+
+/* --- 11. PROJECT FILTERS --- */
+(function () {
+  const buttons = document.querySelectorAll(".filter");
+  const items = document.querySelectorAll(".card-grid > [data-tags]");
+  const count = document.getElementById("filterCount");
+  function apply(tag) {
+    let shown = 0;
+    items.forEach((el) => {
+      const match = tag === "all" || el.dataset.tags.split(" ").includes(tag);
+      el.hidden = !match;
+      if (match) shown++;
+    });
+    buttons.forEach((b) => {
+      const on = b.dataset.filter === tag;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", String(on));
+    });
+    count.textContent = `Showing ${shown} of ${items.length} projects`;
+  }
+  buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter)));
+  apply("all");
+})();
