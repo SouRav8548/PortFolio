@@ -262,3 +262,15 @@ document.querySelectorAll(".flip-card").forEach((card) => {
   buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter)));
   apply("all");
 })();
+
+/* --- 12. DOG ANIMATION TOGGLE --- */
+(function () {
+  const btn = document.getElementById("dogToggle");
+  const dog = document.getElementById("dog");
+  btn.addEventListener("click", () => {
+    const on = btn.getAttribute("aria-pressed") !== "true";
+    btn.setAttribute("aria-pressed", String(on));
+    btn.lastChild.textContent = on ? " on" : " off";
+    dog.classList.toggle("paused", !on);
+  });
+})();

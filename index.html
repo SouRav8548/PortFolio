@@ -115,12 +115,55 @@
         </div>
 
         <div class="image-area">
-          <div class="code-card" aria-label="Profile summary shown as code">
-            <div class="code-bar">
-              <span></span><span></span><span></span>
-              <em>sourav.js</em>
+          <div class="card-wrap">
+            <div
+              class="dog"
+              id="dog"
+              role="img"
+              aria-label="Cartoon puppy gripping the top edge of the card with both paws"
+            >
+              <img
+                class="dog-back"
+                src="dog.png"
+                alt=""
+                width="320"
+                height="408"
+                decoding="async"
+              />
+              <img
+                class="paw paw-l"
+                src="dog.png"
+                alt=""
+                aria-hidden="true"
+                width="320"
+                height="408"
+              />
+              <img
+                class="paw paw-r"
+                src="dog.png"
+                alt=""
+                aria-hidden="true"
+                width="320"
+                height="408"
+              />
             </div>
-            <pre><code><span class="k">const</span> <span class="v">sourav</span> = {
+            <div class="code-card" aria-label="Profile summary shown as code">
+              <div class="code-bar">
+                <span></span><span></span><span></span>
+                <em
+                  >sourav.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</em
+                >
+                <button
+                  type="button"
+                  class="dog-toggle"
+                  id="dogToggle"
+                  aria-pressed="true"
+                  aria-label="Dog animation"
+                >
+                  <span aria-hidden="true">&#128021;</span> on
+                </button>
+              </div>
+              <pre><code><span class="k">const</span> <span class="v">sourav</span> = {
   <span class="p">role</span>: <span class="s">"Full Stack &amp; ML Developer"</span>,
   <span class="p">degree</span>: <span class="s">"MCA (7.78), M.Tech (CS)"</span>,
   <span class="p">stack</span>: [<span class="s">"Python"</span>, <span class="s">"PHP"</span>,
@@ -129,6 +172,7 @@
   <span class="p">location</span>: <span class="s">"Kalyani, West Bengal"</span>,
   <span class="p">openToWork</span>: <span class="b">true</span>,
 };</code></pre>
+            </div>
           </div>
         </div>
       </section>
@@ -149,7 +193,7 @@
           <em class="tag-now" style="font-style: normal">Appearing</em>
         </div>
         <div class="stat">
-          <strong data-count="4" data-decimals="0">4</strong>
+          <strong data-count="5" data-decimals="0">5</strong>
           <span>Projects built</span>
         </div>
         <div class="stat">
@@ -292,8 +336,8 @@
             <h3><i class="fas fa-globe"></i> Web &amp; Database</h3>
             <div class="tags">
               <span>HTML5</span><span>CSS3</span><span>JavaScript</span
-              ><span>React</span><span>Tailwind CSS</span><span>Supabase</span
-              ><span>PHP</span><span>MySQL</span>
+              ><span>jQuery</span><span>React</span><span>Tailwind CSS</span
+              ><span>Supabase</span><span>PHP</span><span>MySQL</span>
             </div>
           </div>
           <div class="skill-category">
@@ -331,8 +375,52 @@
       <!-- PROJECTS -->
       <section id="projects" class="section-container">
         <h2 class="section-title">Projects</h2>
+        <div
+          class="filters"
+          role="group"
+          aria-label="Filter projects by category"
+        >
+          <button
+            type="button"
+            class="filter active"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            class="filter"
+            data-filter="ai"
+            aria-pressed="false"
+          >
+            AI / ML
+          </button>
+          <button
+            type="button"
+            class="filter"
+            data-filter="web"
+            aria-pressed="false"
+          >
+            Web
+          </button>
+          <button
+            type="button"
+            class="filter"
+            data-filter="security"
+            aria-pressed="false"
+          >
+            Security
+          </button>
+          <span
+            id="filterCount"
+            class="filter-count"
+            role="status"
+            aria-live="polite"
+          ></span>
+        </div>
         <div class="card-grid">
-          <article class="card featured">
+          <article class="card featured" data-tags="ai">
             <div class="card-bg" aria-hidden="true">
               <span class="scan"></span>
               <span class="chip c1">Vulgar</span>
@@ -341,15 +429,14 @@
               <span class="chip c4">Threat</span>
               <span class="chip c5">Troll</span>
               <span class="chip c6">Insult</span>
-              <i class="bn b1">ছে</i><i class="bn b2">ক</i
-              ><i class="bn b3">স</i> <i class="bn b4">কা</i
-              ><i class="bn b5">লে</i><i class="bn b6">বো</i>
+              <i class="bn b1">অ</i><i class="bn b2">ক</i><i class="bn b3">স</i>
+              <i class="bn b4">ম</i><i class="bn b5">ব</i><i class="bn b6">র</i>
             </div>
             <div class="card-header">
               <i class="fas fa-brain folder-icon"></i>
               <div class="card-links">
                 <a
-                  href="https://github.com/SouRav8548/MCA--FinalYearProject-Bengali-Toxic-Comment-Classifier"
+                  href="https://github.com/"
                   target="_blank"
                   rel="noopener"
                   aria-label="Bengali toxic comment classifier on GitHub"
@@ -380,7 +467,7 @@
             </div>
           </article>
 
-          <article class="card cinema">
+          <article class="card cinema" data-tags="web">
             <div class="card-bg" aria-hidden="true">
               <span class="beam"></span>
               <span class="strip"></span>
@@ -391,13 +478,13 @@
             <div class="card-header">
               <i class="fas fa-ticket folder-icon"></i>
               <div class="card-links">
-                <!-- <a
+                <a
                   href="https://github.com/"
                   target="_blank"
                   rel="noopener"
                   aria-label="Multiplex Theatre Online Booking System on GitHub"
                   ><i class="fab fa-github"></i
-                ></a> -->
+                ></a>
               </div>
             </div>
             <span class="badge">B.Sc. Final Project</span>
@@ -418,7 +505,7 @@
             </div>
           </article>
 
-          <article class="flip-card" id="hostelmeal">
+          <article class="flip-card" id="hostelmeal" data-tags="web">
             <div class="flip-inner">
               <!-- FRONT -->
               <div class="face front" id="hm-front">
@@ -432,7 +519,7 @@
                   <i class="fas fa-utensils folder-icon"></i>
                   <div class="card-links">
                     <a
-                      href="https://github.com/SouRav8548/BanyanHall-web"
+                      href="https://github.com/"
                       target="_blank"
                       rel="noopener"
                       aria-label="HostelMeal on GitHub"
@@ -440,7 +527,7 @@
                     ></a>
                   </div>
                 </div>
-                <span class="badge">Project Create for Own Hostel</span>
+                <span class="badge">Departmental Mini Project</span>
                 <h3 class="card-title">HostelMeal: Mess &amp; Meal Manager</h3>
                 <p class="card-desc">
                   A role-based web app for Banyan Hall (J.C. Bhawan) that
@@ -510,7 +597,7 @@
             </div>
           </article>
 
-          <article class="card auth">
+          <article class="card auth" data-tags="security web">
             <div class="card-bg" aria-hidden="true">
               <span class="lock"></span>
               <span class="pwbox"
@@ -526,13 +613,13 @@
             <div class="card-header">
               <i class="fas fa-shield-halved folder-icon"></i>
               <div class="card-links">
-                <!-- <a
+                <a
                   href="https://github.com/"
                   target="_blank"
                   rel="noopener"
                   aria-label="Secure Auth Module on GitHub"
                   ><i class="fab fa-github"></i
-                ></a> -->
+                ></a>
               </div>
             </div>
             <span class="badge">Web Security</span>
@@ -554,7 +641,7 @@
           <article class="card lab" data-tags="web">
             <div class="card-bg" aria-hidden="true">
               <span class="scan"></span>
-              <span class="chip c1">XAMPP</span>
+              <span class="chip c1">index.php</span>
               <span class="chip c2">quiz.php</span>
               <span class="chip c3">db.sql</span>
               <span class="chip c4">jQuery</span>
@@ -565,7 +652,7 @@
               <i class="fas fa-flask folder-icon"></i>
               <div class="card-links">
                 <a
-                  href="https://github.com/SouRav8548/MCA--Sem3___WebLabs"
+                  href="https://github.com/"
                   target="_blank"
                   rel="noopener"
                   aria-label="Web Programming Lab on GitHub"
@@ -577,10 +664,9 @@
             <h3 class="card-title">Web Programming Lab: 7 Projects</h3>
             <p class="card-desc">
               Seven
-              <span class="hl">PHP, JavaScript and MySQL using XAMPP</span>
-              practicals: a jQuery page, scientific calculator, quiz platform,
-              result management system, MVC factorial app, banking system and
-              file pad.
+              <span class="hl">PHP, JavaScript and MySQL</span> practicals: a
+              jQuery page, scientific calculator, quiz platform, result
+              management system, MVC factorial app, banking system and file pad.
             </p>
             <ul class="card-points">
               <li>Role-based dashboards for admin, manager, staff and users</li>
@@ -589,7 +675,7 @@
             </ul>
             <div class="card-tech">
               <span>PHP</span><span>MySQL</span><span>JavaScript</span
-              ><span>jQuery</span><span>HTML/CSS</span><span>XAMPP</span>
+              ><span>jQuery</span><span>HTML/CSS</span>
             </div>
           </article>
         </div>
@@ -598,13 +684,10 @@
 
     <!-- CONTACT -->
     <footer id="contact">
-      <h2>
-        <span style="color: #ffffff">Let’s build</span>
-        <span style="color: #ffa348">something meaningful.</span>
-      </h2>
+      <h2>Let's work together</h2>
       <p>
-        I'm looking for an <span style="color: #ecec0c">entry-level role</span>.
-        Send me a message about the position, and I'll reply as soon as I can.
+        I'm looking for an internship or entry-level role. Send me a message
+        about the position, and I'll reply as soon as I can.
       </p>
       <div class="btn-group center">
         <a href="mailto:souravmaitu8548@gmail.com" class="btn btn-solid"
@@ -617,21 +700,21 @@
       <p class="mail-line">souravmaitu8548@gmail.com</p>
       <div class="socials">
         <a
-          href="https://www.linkedin.com/in/sourav8548/"
+          href="https://www.linkedin.com/"
           target="_blank"
           rel="noopener"
           aria-label="LinkedIn"
           ><i class="fab fa-linkedin"></i
         ></a>
         <a
-          href="https://github.com/SouRav8548"
+          href="https://github.com/"
           target="_blank"
           rel="noopener"
           aria-label="GitHub"
           ><i class="fab fa-github"></i
         ></a>
         <a
-          href="https://www.instagram.com/unique__maitu/"
+          href="https://www.instagram.com/"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
