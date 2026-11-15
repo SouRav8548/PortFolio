@@ -206,3 +206,36 @@ document.querySelectorAll(".hl").forEach((el, i) => {
   el.dataset.text = el.textContent.trim();
   el.style.setProperty("--gd", `${((i * 0.9) % 4.5).toFixed(1)}s`);
 });
+
+/* --- 10. FLIP CARDS (click, tap, Enter/Space on the button, Esc to go back) --- */
+document.querySelectorAll(".flip-card").forEach((card) => {
+  const front = card.querySelector(".front");
+  const back = card.querySelector(".back");
+
+  function setFlipped(flipped, moveFocus = true) {
+    card.classList.toggle("is-flipped", flipped);
+    // the hidden side must not be reachable by keyboard or screen readers
+    front.inert = flipped;
+    back.inert = !flipped;
+    const target = (flipped ? back : front).querySelector(".flip-btn");
+    if (moveFocus && target) target.focus({ preventScroll: true });
+  }
+  setFlipped(false, false);
+
+  card.querySelectorAll(".flip-btn").forEach((btn) =>
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setFlipped(!card.classList.contains("is-flipped"));
+    }),
+  );
+
+  // mouse/touch users can also tap the front of the card (links keep working)
+  front.addEventListener("click", (e) => {
+    if (e.target.closest("a, button")) return;
+    setFlipped(true);
+  });
+
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && card.classList.contains("is-flipped")) setFlipped(false);
+  });
+});

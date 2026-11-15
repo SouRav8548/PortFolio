@@ -92,8 +92,7 @@
           </div>
 
           <p class="lead">
-            <strong class="hl">MCA graduate</strong>, now pursuing
-            <strong class="hl">M.Tech in Computer Science</strong> at the
+            MCA graduate, now pursuing M.Tech in Computer Science at the
             <strong class="hl">University of Kalyani</strong>, building the
             bridge between <strong class="hl">Data Science</strong> and
             <strong class="hl">Web Development</strong>. I train deep learning
@@ -150,7 +149,7 @@
           <em class="tag-now" style="font-style: normal">Appearing</em>
         </div>
         <div class="stat">
-          <strong data-count="3" data-decimals="0">3</strong>
+          <strong data-count="4" data-decimals="0">4</strong>
           <span>Projects built</span>
         </div>
         <div class="stat">
@@ -168,18 +167,20 @@
             <h3>Full stack web development</h3>
             <p>
               I build complete apps with login, database and user interface,
-              like my multiplex ticket booking system.
+              like HostelMeal (React + Supabase) and my multiplex ticket booking
+              system.
             </p>
             <div class="tags">
-              <span>PHP</span><span>JavaScript</span><span>MySQL</span>
+              <span>React</span><span>PHP</span><span>Supabase</span
+              ><span>MySQL</span>
             </div>
           </div>
           <div class="hl-card">
             <div class="ico"><i class="fas fa-brain"></i></div>
             <h3>Deep learning and data</h3>
             <p>
-              I train and compare models on real Bengali text data for my
-              research.
+              I train and compare transformer and hybrid models on real Bengali
+              social media text for my MCA thesis.
             </p>
             <div class="tags">
               <span>Python</span><span>TensorFlow</span><span>Pandas</span>
@@ -207,7 +208,7 @@
             <p>
               I completed my
               <span class="hl">Master of Computer Applications</span> in 2026
-              and now pursuing
+              and am now pursuing an
               <span class="hl">M.Tech in Computer Science</span> at the
               University of Kalyani. I have a strong foundation in
               <span class="hl">C and Python</span> and hands-on experience
@@ -215,9 +216,9 @@
               <span class="hl">PHP, JavaScript and MySQL</span>.
             </p>
             <p>
-              My MCA research compared deep learning models for classifying
-              vulgar text in Bengali, so I worked with real, messy language
-              data, not just clean tutorials.
+              My MCA thesis compared deep learning models for classifying toxic
+              comments in Bengali, so I worked with real, messy language data,
+              not just clean tutorials.
             </p>
             <p>
               I'm looking for an
@@ -249,8 +250,8 @@
               <p>
                 <b>University of Kalyani</b>, West Bengal<br />
                 CGPA: <b>7.78</b><br />
-                Project: Comparative study of deep learning models on Bengali
-                vulgar text classification.
+                Thesis: Multi-label Bengali toxic comment classification using a
+                hybrid deep learning framework.
               </p>
             </div>
             <div class="timeline-item">
@@ -260,7 +261,8 @@
                 <b>Yogoda Satsanga Palpara Mahavidyalaya</b>, Vidyasagar
                 University<br />
                 CGPA: <b>8.42</b><br />
-                Project: Multiplex Theater Online Ticket Booking System.
+                Project: Multiplex Theatre Online Booking System (PHP and
+                MySQL).
               </p>
             </div>
             <div class="timeline-item">
@@ -290,6 +292,7 @@
             <h3><i class="fas fa-globe"></i> Web &amp; Database</h3>
             <div class="tags">
               <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+              ><span>React</span><span>Tailwind CSS</span><span>Supabase</span
               ><span>PHP</span><span>MySQL</span>
             </div>
           </div>
@@ -330,72 +333,206 @@
         <h2 class="section-title">Projects</h2>
         <div class="card-grid">
           <article class="card featured">
+            <div class="card-bg" aria-hidden="true">
+              <span class="scan"></span>
+              <span class="chip c1">Vulgar</span>
+              <span class="chip c2">Hate</span>
+              <span class="chip c3">Religious</span>
+              <span class="chip c4">Threat</span>
+              <span class="chip c5">Troll</span>
+              <span class="chip c6">Insult</span>
+              <i class="bn b1">ছে</i><i class="bn b2">ক</i
+              ><i class="bn b3">স</i> <i class="bn b4">কা</i
+              ><i class="bn b5">লে</i><i class="bn b6">বো</i>
+            </div>
             <div class="card-header">
               <i class="fas fa-brain folder-icon"></i>
               <div class="card-links">
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/SouRav8548/MCA--FinalYearProject-Bengali-Toxic-Comment-Classifier"
                   target="_blank"
                   rel="noopener"
-                  aria-label="Bengali NLP Classifier on GitHub"
+                  aria-label="Bengali toxic comment classifier on GitHub"
                   ><i class="fab fa-github"></i
                 ></a>
               </div>
             </div>
-            <span class="badge">MCA Research Project</span>
-            <h3 class="card-title">Bengali Vulgar Text Classifier</h3>
+            <span class="badge">MCA Thesis &middot; Team of 2</span>
+            <h3 class="card-title">Bengali Toxic Comment Classifier</h3>
             <p class="card-desc">
-              Compares deep learning models for detecting vulgar text written in
-              Bengali script, built with <span class="hl">TensorFlow</span>.
+              Multi-label classification of Bengali comments into six toxicity
+              categories using a
+              <span class="hl">hybrid deep learning</span> framework. Compared
+              six models; the best one reached a Macro F1-score of
+              <span class="hl">0.7577</span>.
             </p>
             <ul class="card-points">
-              <li>Prepared and cleaned Bengali text data for training</li>
-              <li>Trained and compared multiple deep learning models</li>
+              <li>Labels: Vulgar, Hate, Religious, Threat, Troll, Insult</li>
+              <li>
+                Compared BanglaBERT, GAT, label-wise attention,
+                FastText-CNN-BiLSTM-TCN and XLM-RoBERTa models
+              </li>
+              <li>Best: XLM-RoBERTa + BiLSTM + Attention + Focal Loss</li>
             </ul>
             <div class="card-tech">
-              <span>Python</span><span>TensorFlow</span><span>NLP</span>
+              <span>Python</span><span>XLM-RoBERTa</span><span>BanglaBERT</span
+              ><span>BiLSTM</span><span>NLP</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="card cinema">
+            <div class="card-bg" aria-hidden="true">
+              <span class="beam"></span>
+              <span class="strip"></span>
+              <span class="ticket">FILM-K7QZP-7:30PM</span>
+              <i class="dust d1"></i><i class="dust d2"></i
+              ><i class="dust d3"></i><i class="dust d4"></i>
+            </div>
             <div class="card-header">
               <i class="fas fa-ticket folder-icon"></i>
               <div class="card-links">
-                <a
+                <!-- <a
                   href="https://github.com/"
                   target="_blank"
                   rel="noopener"
-                  aria-label="Multiplex Ticket Booking System on GitHub"
+                  aria-label="Multiplex Theatre Online Booking System on GitHub"
                   ><i class="fab fa-github"></i
-                ></a>
+                ></a> -->
               </div>
             </div>
             <span class="badge">B.Sc. Final Project</span>
-            <h3 class="card-title">Multiplex Ticket Booking System</h3>
+            <h3 class="card-title">Multiplex Online Ticket Booking</h3>
             <p class="card-desc">
-              <span class="hl">Full stack web app</span> for theater management
-              with user authentication, seat selection and booking history.
+              Customers register, log in, check show availability and book
+              seats. They then receive an <span class="hl">SMS m-ticket</span>
+              code to show at the cinema counter.
             </p>
             <ul class="card-points">
-              <li>Login and signup for customers</li>
-              <li>Seat selection and booking records in MySQL</li>
+              <li>Admin panel to manage movies, shows, schedules and users</li>
+              <li>Counter staff verify the code and issue the tickets</li>
+              <li>SMS delivery tested with the Clickatell gateway</li>
             </ul>
             <div class="card-tech">
-              <span>PHP</span><span>MySQL</span><span>HTML5</span>
+              <span>PHP</span><span>MySQL</span><span>JavaScript</span
+              ><span>HTML5</span><span>SMS Gateway</span>
             </div>
           </article>
 
-          <article class="card">
+          <article class="flip-card" id="hostelmeal">
+            <div class="flip-inner">
+              <!-- FRONT -->
+              <div class="face front" id="hm-front">
+                <div class="card-bg hm-bg" aria-hidden="true">
+                  <i class="steam st1"></i><i class="steam st2"></i
+                  ><i class="steam st3"></i> <span class="sw s1"></span
+                  ><span class="sw s2"></span><span class="sw s3"></span>
+                  <span class="clock"><b>IST</b></span>
+                </div>
+                <div class="card-header">
+                  <i class="fas fa-utensils folder-icon"></i>
+                  <div class="card-links">
+                    <a
+                      href="https://github.com/SouRav8548/BanyanHall-web"
+                      target="_blank"
+                      rel="noopener"
+                      aria-label="HostelMeal on GitHub"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </div>
+                </div>
+                <span class="badge">Project Create for Own Hostel</span>
+                <h3 class="card-title">HostelMeal: Mess &amp; Meal Manager</h3>
+                <p class="card-desc">
+                  A role-based web app for Banyan Hall (J.C. Bhawan) that
+                  <span class="hl">replaces paper mess registers</span>.
+                  Boarders switch meals on or off and book guest meals, and the
+                  kitchen gets live headcounts.
+                </p>
+                <ul class="card-points">
+                  <li>Session lock with automatic reset of guest counters</li>
+                  <li>All times synced to IST (Asia/Kolkata)</li>
+                  <li>Printable kitchen and audit reports</li>
+                </ul>
+                <div class="card-tech">
+                  <span>React</span><span>Vite</span><span>Tailwind CSS</span
+                  ><span>Supabase</span><span>PostgreSQL</span>
+                </div>
+                <button
+                  type="button"
+                  class="flip-btn"
+                  aria-expanded="false"
+                  aria-controls="hm-back"
+                >
+                  <i class="fas fa-rotate" aria-hidden="true"></i> See how it
+                  works
+                </button>
+              </div>
+
+              <!-- BACK -->
+              <div class="face back" id="hm-back" inert>
+                <span class="badge">Inside HostelMeal</span>
+                <h3 class="card-title">Roles, prices and logic</h3>
+
+                <h4 class="back-label">Who uses it</h4>
+                <div class="tags">
+                  <span>Boarder</span><span>Mess Manager</span
+                  ><span>Cashier</span><span>Mess Prefect</span
+                  ><span>Auditor</span><span>Superintendent</span>
+                </div>
+
+                <h4 class="back-label">Guest meal prices</h4>
+                <div class="tags">
+                  <span>Veg &#8377;60</span><span>Paneer &#8377;70</span
+                  ><span>Egg &#8377;65</span><span>Fish &#8377;80</span
+                  ><span>Chicken &#8377;110</span>
+                </div>
+
+                <h4 class="back-label">Under the hood</h4>
+                <ul class="card-points">
+                  <li>Role-based access with Supabase Auth</li>
+                  <li>
+                    Locking a session saves meal logs and guest summaries, then
+                    resets the counters
+                  </li>
+                  <li>Tables: profiles, meal_logs, guest_meal_logs</li>
+                </ul>
+
+                <button
+                  type="button"
+                  class="flip-btn"
+                  aria-expanded="true"
+                  aria-controls="hm-front"
+                >
+                  <i class="fas fa-rotate-left" aria-hidden="true"></i> Back to
+                  summary
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card auth">
+            <div class="card-bg" aria-hidden="true">
+              <span class="lock"></span>
+              <span class="pwbox"
+                ><b>password</b
+                ><i class="dots"
+                  >&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</i
+                ></span
+              >
+              <span class="hashline">$2b$12$Kx9fQ7vL2mZ&hellip;</span>
+              <i class="hx x1">a3f9</i><i class="hx x2">7c1e</i
+              ><i class="hx x3">e04b</i><i class="hx x4">91d2</i>
+            </div>
             <div class="card-header">
               <i class="fas fa-shield-halved folder-icon"></i>
               <div class="card-links">
-                <a
+                <!-- <a
                   href="https://github.com/"
                   target="_blank"
                   rel="noopener"
                   aria-label="Secure Auth Module on GitHub"
                   ><i class="fab fa-github"></i
-                ></a>
+                ></a> -->
               </div>
             </div>
             <span class="badge">Web Security</span>
@@ -419,10 +556,13 @@
 
     <!-- CONTACT -->
     <footer id="contact">
-      <h2>Let's work together</h2>
+      <h2>
+        <span style="color: #ffffff">Let’s build</span>
+        <span style="color: #ffa348">something meaningful.</span>
+      </h2>
       <p>
-        I'm looking for an internship or entry-level role. Send me a message
-        about the position, and I'll reply as soon as I can.
+        I'm looking for an <span style="color: #ecec0c">entry-level role</span>.
+        Send me a message about the position, and I'll reply as soon as I can.
       </p>
       <div class="btn-group center">
         <a href="mailto:souravmaitu8548@gmail.com" class="btn btn-solid"
@@ -435,21 +575,21 @@
       <p class="mail-line">souravmaitu8548@gmail.com</p>
       <div class="socials">
         <a
-          href="https://www.linkedin.com/"
+          href="https://www.linkedin.com/in/sourav8548/"
           target="_blank"
           rel="noopener"
           aria-label="LinkedIn"
           ><i class="fab fa-linkedin"></i
         ></a>
         <a
-          href="https://github.com/"
+          href="https://github.com/SouRav8548"
           target="_blank"
           rel="noopener"
           aria-label="GitHub"
           ><i class="fab fa-github"></i
         ></a>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/unique__maitu/"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
