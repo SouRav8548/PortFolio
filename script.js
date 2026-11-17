@@ -58,9 +58,9 @@ function setMenu(open) {
 menuBtn.addEventListener("click", () =>
   setMenu(!navLinks.classList.contains("active")),
 );
-navLinks.querySelectorAll("a").forEach((a) =>
-  a.addEventListener("click", () => setMenu(false)),
-);
+navLinks
+  .querySelectorAll("a")
+  .forEach((a) => a.addEventListener("click", () => setMenu(false)));
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") setMenu(false);
 });
@@ -92,7 +92,11 @@ const glyphs = "01010101ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const fontSize = 14;
 let drops = [];
 const root = document.documentElement;
-let rain = { fade: "rgba(11, 12, 16, 0.05)", dim: "#45a29e", bright: "#66fcf1" };
+let rain = {
+  fade: "rgba(11, 12, 16, 0.05)",
+  dim: "#45a29e",
+  bright: "#66fcf1",
+};
 
 function readTheme() {
   const light = root.getAttribute("data-theme") === "light";
@@ -140,29 +144,51 @@ document.addEventListener("visibilitychange", () =>
 startRain();
 
 /* --- 6. DARK / LIGHT TOGGLE (dark by default) --- */
+/* --- 6. DARK / LIGHT TOGGLE (dark by default) --- */
+
 const themeBtn = document.getElementById("themeToggle");
+const themeLogo = document.getElementById("themeLogo");
 
 function applyTheme(theme) {
+  // Apply Theme
   root.setAttribute("data-theme", theme);
+
+  // Change Logo According to Theme
+  if (themeLogo) {
+    themeLogo.src = theme === "light" ? "logo-light.png" : "logo-dark.png";
+  }
+
+  // Update Accessibility Label
   themeBtn.setAttribute(
     "aria-label",
     theme === "light" ? "Switch to dark mode" : "Switch to light mode",
   );
+
+  // Existing Functionality
   readTheme();
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   const meta = document.querySelector('meta[name="theme-color"]');
-  if (meta) meta.content = theme === "light" ? "#faf7f1" : "#0b0c10";
+
+  if (meta) {
+    meta.content = theme === "light" ? "#faf7f1" : "#0b0c10";
+  }
 }
+
+// Apply Default / Saved Theme
 applyTheme(root.getAttribute("data-theme") || "dark");
 
+// Theme Toggle Button
 themeBtn.addEventListener("click", () => {
   const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+
   applyTheme(next);
+
   try {
     localStorage.setItem("theme", next);
   } catch (e) {}
 });
-
 /* --- 7. SCROLL PROGRESS BAR --- */
 const progress = document.getElementById("progress");
 function updateProgress() {
@@ -236,7 +262,8 @@ document.querySelectorAll(".flip-card").forEach((card) => {
   });
 
   card.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && card.classList.contains("is-flipped")) setFlipped(false);
+    if (e.key === "Escape" && card.classList.contains("is-flipped"))
+      setFlipped(false);
   });
 });
 
@@ -259,7 +286,9 @@ document.querySelectorAll(".flip-card").forEach((card) => {
     });
     count.textContent = `Showing ${shown} of ${items.length} projects`;
   }
-  buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter)));
+  buttons.forEach((b) =>
+    b.addEventListener("click", () => apply(b.dataset.filter)),
+  );
   apply("all");
 })();
 
