@@ -69,15 +69,15 @@ This portfolio uses standard front-end technologies, so **no build step is requi
 
 1. Clone your repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+   git clone https://github.com/SouRav8548/PortFolio.git
    ```
 2. Open the project directory:
    ```bash
-   cd YOUR_REPOSITORY
+   cd PortFolio
    ```
 3. Open **`index.html`** in your browser, or use a local development server such as the **Live Server** extension in VS Code.
 
-> **Note:** Replace `YOUR_USERNAME` and `YOUR_REPOSITORY` with your actual GitHub details. If your entry HTML file has a different name, open that file instead.
+> **Note:** Replace `SouRav8548` and `PortFolio` with your actual GitHub details. If your entry HTML file has a different name, open that file instead.
 
 ## 🎨 Design Philosophy
 
@@ -89,10 +89,10 @@ The portfolio balances **clarity and accessibility** with a distinctive develope
 
 I'm open to discussing **software development, AI projects, internships, and collaboration opportunities**.
 
-- 🐙 **GitHub:** Add your GitHub profile link
-- 💼 **LinkedIn:** Add your LinkedIn profile link
-- 🌐 **Live Portfolio:** Add your deployed website link
-- ✉️ **Email:** Add your preferred contact email
+- 🐙 **GitHub:** https://github.com/SouRav8548
+- 💼 **LinkedIn:** https://www.linkedin.com/in/sourav8548/
+- 🌐 **Live Portfolio:** https://portfoliosouravmaity.vercel.app/
+- ✉️ **Email:** souravmaitu8548@gmail.com
 
 ---
 
