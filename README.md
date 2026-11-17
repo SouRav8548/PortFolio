@@ -93,6 +93,7 @@ I'm open to discussing **software development, AI projects, internships, and col
 - 💼 **LinkedIn:** https://www.linkedin.com/in/sourav8548/
 - 🌐 **Live Portfolio:** https://portfoliosouravmaity.vercel.app/
 - ✉️ **Email:** souravmaitu8548@gmail.com
+- 📸 **Instagram:** https://www.instagram.com/unique__maitu?srtk=MWF0YmZ4YWx6aHh0Zw==
 
 ---
 
